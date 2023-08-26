@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jasmine</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/services.css">
+</head>
+
+<body>
+  <div class="main-nav">
+    <div class="container">
+      <div class="mobile-toggle"> <span></span> <span></span> <span></span> </div>
+      <nav>
+        <div class="logo">Beauty saloon&emsp;|&emsp;Jasmine</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-item_trigger">
+          Manicure
+        </div>
+        <div class="accordion-item_content">
+          <table>
+            <tr>
+              <th>Service name</th>
+              <th>Time</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>Hardware manicure without coating</td>
+              <td>40 min</td>
+              <td>400 UAH</td>
+            </tr>
+            <tr>
+              <td>Hygienic manicure without coating</td>
+              <td>40 min</td>
+              <td>400 UAH</td>
+            </tr>
+            <tr>
+              <td>Hand massage</td>
+              <td>15 min</td>
+              <td>100 UAH</td>
+            </tr>
+            <tr>
+              <td>Hardware manicure with coating</td>
+              <td>80 min</td>
+              <td>850 UAH</td>
+            </tr>
+            <tr>
+              <td>Hygienic manicure with coating</td>
+              <td>100 min</td>
+              <td>900 UAH</td>
+            </tr>
+            <tr>
+              <td>Covering with gel varnish</td>
+              <td>30 min</td>
+              <td>450 UAH</td>
+            </tr>
+            <tr>
+              <td>Varnish coating</td>
+              <td>10 min</td>
+              <td>200 UAH</td>
+            </tr>
+            <tr>
+              <td>Removing hand gel polish</td>
+              <td>20 min</td>
+              <td>140 UAH</td>
+            </tr>
+            <tr>
+              <td>Varnish removal</td>
+              <td>5 min</td>
+              <td>50 UAH</td>
+            </tr> 
+          </table>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-item_trigger">
+          Make up
+        </div>
+        <div class="accordion-item_content">
+          <table>
+            <tr>
+              <th>Service name</th>
+              <th>Time</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>Daytime makeup</td>
+              <td>40 min</td>
+              <td>400 UAH</td>
+            </tr>
+            <tr>
+              <td>Evening makeup</td>
+              <td>60 min</td>
+              <td>450 UAH</td>
+            </tr>
+            <tr>
+              <td>Wedding, holiday make-up</td>
+              <td>60 min</td>
+              <td>550 UAH</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <div class="accordion-item_trigger">
+          Нair stylist services
+        </div>
+        <div class="accordion-item_content">
+          <table>
+            <tr>
+              <th>Service name</th>
+              <th>Time</th>
+              <th>Price</th>
+            </tr>
+            <tr>
+              <td>Women's haircut</td>
+              <td>50 min</td>
+              <td>750 UAH</td>
+            </tr>
+            <tr>
+              <td>Сomplex coloring</td>
+              <td>180 min</td>
+              <td>4400 UAH</td>
+            </tr>
+            <tr>
+              <td>Highlights</td>
+              <td>from 120 min</td>
+              <td>from 1900 UAH</td>
+            </tr>
+            <tr>
+              <td>Women's evening styling</td>
+              <td>from 60 min</td>
+              <td>from 880 UAH</td>
+            </tr>
+            <tr>
+              <td>Weaving</td>
+              <td>from 60 min</td>
+              <td>from 310 UAH</td>
+            </tr>
+            <tr>
+              <td>Men's haircut</td>
+              <td>from 40 min</td>
+              <td>from 650 UAH</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer id="footer">
+    <div>
+      <p>2023</p>
+    </div>
+    <div class="social">
+      <a href="https://twitter.com"><img src="img/twitter.svg" alt="twitter"></a>
+      <a href="https://facebook.com"><img src="img/facebook.svg" alt="facebook"></a>
+      <a href="https://aboutme.google.com"><img src="img/google-plus.svg" alt="Google Plus Link"></a>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.accordion-item_trigger').click(function () {
+        const parent = $(this).parent();
+
+        if (parent.hasClass('accordion-item--active')) {
+          parent.removeClass('accordion-item--active');
+        } else {
+          $('.accordion-item').removeClass('accordion-item--active')
+          parent.addClass('accordion-item--active')
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
