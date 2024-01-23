@@ -1,1 +1,1 @@
-# BeautySaloon
+# BeautySalon
